@@ -4,21 +4,6 @@
       "assets/": "assets/",
       "webpack/webpack.config.js": "webpack.config.js",
       "config/packages/webpack.yaml": "config/packages/webpack.yaml"
-    },
-    "npm": {
-      "dependencies": {
-        "@symfony/webpack-encore": "^4.0",
-        "sass": "^1.53",
-        "css-loader": "^6.7",
-        "style-loader": "^3.3",
-        "postcss-loader": "^7.0"
-      },
-      "devDependencies": {
-        "@babel/core": "^7.15",
-        "@babel/preset-env": "^7.15",
-        "webpack": "^5.56",
-        "webpack-cli": "^4.8"
-      }
     }
   },
   "post-install-output": [
