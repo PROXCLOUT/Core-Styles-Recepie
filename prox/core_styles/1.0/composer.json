@@ -1,4 +1,13 @@
-{
+{  
+  "name": "proxclout/core-styles",
+  "type": "symfony-recipe",
+  "description": "Core styles and assets for Symfony projects",
+  "version": "1.0",
+  "require": {
+    "php": ">=7.4",
+    "symfony/webpack-encore-bundle": "^1.12",
+    "twig/twig": "^3.0"
+  },
     "scripts": {
       "post-install-cmd": [
         "npm install",
