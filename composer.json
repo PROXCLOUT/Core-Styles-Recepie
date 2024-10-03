@@ -1,13 +1,13 @@
 {
   "name": "prox/core-styles",
-  "type": "symfony-recipe",
+  "type": "library",
   "description": "Core styles and assets for Symfony projects",
   "version": "1.0",
   "require": {
     "php": ">=7.4",
-    "symfony/form": "^6.1",
-    "symfony/asset": "^6.1",
-    "symfony/twig-bundle": "^6.1",
+    "symfony/form": "^6.1 || ^7.0",
+    "symfony/asset": "^6.1 || ^7.0",
+    "symfony/twig-bundle": "^6.1 || ^7.0",
     "twig/twig": "^2.12|^3.0",
     "symfony/ux-twig-component": "^2.20",
     "symfony/webpack-encore-bundle": "^1.12 || ^2.0"
