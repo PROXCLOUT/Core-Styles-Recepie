@@ -1,0 +1,13 @@
+{
+    "scripts": {
+      "post-install-cmd": [
+        "npm install",
+        "npm run dev"
+      ],
+      "post-update-cmd": [
+        "npm install",
+        "npm run build"
+      ]
+    }
+  }
+  

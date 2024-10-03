@@ -1,0 +1,81 @@
+/*
+ * Author: Patrick Piper
+ * Website: coretecs.net
+ * Version: 1.0
+ */
+
+ $breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Mixin für Media Queries
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    $value: map-get($breakpoints, $point);
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @error "Unbekannter Breakpoint: #{$point}. Bitte verwenden Sie einen der #{map-keys($breakpoints)}.";
+  }
+}
+
+// Mixin für Oversize-Bildschirme
+@mixin oversize {
+  @include breakpoint(xl) {
+    @content;
+  }
+}
+
+// Tablets und kleine Desktops -- Große Geräte
+@mixin laptop {
+  @include breakpoint(lg) {
+    @content;
+  }
+}
+
+// Kleine Tablets und große Smartphones (Querformat) -- Kleine Geräte
+@mixin tablet {
+  @include breakpoint(md) {
+    @content;
+  }
+}
+
+// Winzige Geräte
+@mixin mobile {
+  @include breakpoint(sm) {
+    @content;
+  }
+}
+
+// Tablets und kleine Desktops -- Große Geräte
+@mixin xl {
+  @include oversize {
+    @content;
+  }
+}
+
+// Tablets und kleine Desktops -- Große Geräte
+@mixin l {
+  @include laptop {
+    @content;
+  }
+}
+
+// Kleine Tablets und große Smartphones (Querformat) -- Kleine Geräte
+@mixin m {
+  @include tablet {
+    @content;
+  }
+}
+
+// Winzige Geräte
+@mixin s {
+  @include mobile {
+    @content;
+  }
+}

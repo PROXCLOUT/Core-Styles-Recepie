@@ -1,0 +1,117 @@
+a.button, input[type="submit"], button.button, .field button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    
+    border-radius: var(--misc-border-radius);
+    background: var(--color-quiet);
+    border-style: none;
+    color: var(--color-text);
+
+    font-family: var(--typo-ff-primary);
+    font-weight: 600;
+    font-size:  var(--typo-fs-small);
+
+    transition: all 0.3s;
+
+    padding: calc(var(--misc-padding-tiny) * 1.33) calc(var(--misc-padding-small) * 1.66);
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    &>* {
+        transition: all 0.3s;
+    }
+
+    &.icon span[class^="icon-"] {
+        margin-right: 0.5rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-darkest);
+        color: var(--color-bright);
+        span,p  {
+            color: var(--color-primary);
+        }
+    }
+
+    &.cta, &[type="submit"] {
+        background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+        --color-text: var(--color-bright);
+        border: solid 1px var(--color-primary);
+        &:hover {
+            background: transparent;
+            color: var(--color-primary);
+            span, p {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &.plus, &.close {
+        background: var(--color-dark);
+        border-radius: var(--misc-border-radius);
+        width: 25px;
+        height: 25px;
+        padding: var(--misc-padding-small);
+        aspect-ratio: 1;
+
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            left: var(--misc-padding-small);
+            top: calc(50% - 1.5px);
+
+            height: 3px;
+            width: 25px;
+
+            border-radius: var(--misc-border-radius);
+            background-color: var(--color-bright);
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: calc(50% - 1.5px);
+            top: var(--misc-padding-small);
+            
+            height: 25px;
+            width: 3px;
+
+        }
+    }
+
+    &.close {
+        width: 45px;
+        height: 45px;
+        transform: rotate(45deg);
+    }
+}
+
+.button-group {
+    gap: 0.25rem;
+    display: flex;
+    background-color: var(--color-brightest);
+    border-radius: var(--misc-border-radius);
+    width: fit-content;
+
+    > .button {
+        background: transparent;
+
+        &:hover {
+            background: var(--color-darkest);
+            color: var(--color-brightest);
+        }
+    }
+
+    > .button.active, > .button.cta {
+        background: var(--color-darkest);
+        color: var(--color-brightest);
+        border: unset;
+    }
+
+    &.transparent {
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,102 @@
+/*
+ * Author: Patrick Piper
+ * Website: coretecs.net
+ * Version: 1.0
+ */
+
+// Font Sizes
+.tiny {
+    font-size: var(--typo-fs-tiny);
+}
+
+.small {
+    font-size: var(--typo-fs-small);
+}
+
+.quiet {
+    opacity: 0.5;
+}
+
+// Text Weight and Alignment
+.bold {
+    font-weight: var(--typo-fw-medium);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// Text Transformations
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+// Color Styles
+.color-bright {
+    color: var(--color-bright);
+}
+.color-primary {
+    color: var(--color-primary);
+}
+.color-dark {
+    color: var(--color-dark);
+}
+  
+
+.plakativ-l {
+    font-size: var(--typo-fs-large);
+    font-weight: var(--typo-fw-bold);
+    font-family: var(--typo-ff-secondary);
+}
+.plakativ {
+    font-size: var(--typo-fs-big);
+    font-weight: var(--typo-fw-medium);
+    font-family: var(--typo-ff-secondary);
+}
+
+.plakativ-m {
+    font-size: var(--typo-fs-medium);
+    font-weight: var(--typo-fw-medium);
+}
+
+.plakativ-s {
+    font-size: var(--typo-fs-regular);
+    font-weight: var(--typo-fw-medium);
+    font-family: var(--typo-ff-secondary);
+}
+
+// Title Container
+.title-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+        color: var(--color-text);
+        width: fit-content;
+        padding-right: var(--misc-padding-regular);
+    }
+}
+
+span.badge {
+    padding: 0.25rem 0.5rem;
+    font-size: var(--typo-fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    background-color: var(--color-dark);
+    color: var(--color-bright);
+    border-radius: 25px;
+}

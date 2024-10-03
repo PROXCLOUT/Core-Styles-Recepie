@@ -1,0 +1,127 @@
+// Farben
+$secondary: #00b579;
+$primary: #00b58a;
+$third: #0097b5;
+
+$dark: #1b1b1b;
+$bright: #f0f2f3;
+
+$color-quiet: #8f959834;
+$color-strong: #162629b4;
+
+// Farben Mixin
+@mixin colors {
+  --color-primary: #{$primary};
+  --color-secondary: #{$secondary};
+  --color-third: #{$third};
+  
+  --color-dark: #{$dark};
+  --color-bright: #{$bright};
+  --color-darkest: #0c1316;
+  --color-brightest: white;
+
+  --color-quiet: #{$color-quiet};
+  --color-strong: #{$color-strong};
+
+  --color-text: var(--color-strong);
+  --color-headline: var(--color-darkest);
+
+  --color-links: var(--color-primary);
+  --color-background: var(--color-bright);
+
+  --color-success: #adff31;
+  --color-error: #ff5731;
+}
+
+// Typografie Mixin
+@mixin typography {
+  --typo-fs-base: 18px;
+
+  --typo-fs-tiny: 0.75rem;
+  --typo-fs-small: 16px;
+  --typo-fs-regular: 1rem;
+  --typo-fs-medium: 1.5rem;
+  --typo-fs-big: 1.75rem;
+  --typo-fs-large: 3.5rem;
+  --typo-fs-huge: 5rem;
+
+  --typo-break: 2.5rem;
+  
+  --typo-fw-base: 400;
+  --typo-fw-medium: 600;
+  --typo-fw-bold: 900;
+
+  --typo-lh-base: 1.65rem;
+  --typo-ls-base: 0.025rem;
+
+  --typo-ff-primary: "Raleway";
+  --typo-ff-secondary: "Raleway";
+}
+
+// Verschiedenes Mixin
+@mixin misc {
+  --misc-gradient: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --misc-gradient-overlay: linear-gradient(#{$dark}, transparentize(#{$dark}, 0.99));
+
+  --misc-gap-tiny: 0.25rem;
+  --misc-gap-small: 0.33rem;
+  --misc-gap-regular: 0.6rem;
+  --misc-gap-medium: 1.33rem;
+  --misc-gap-large: 1.6rem;
+  --misc-gap-huge: 5rem;
+  
+  --misc-padding-tiny: 0.35rem;
+  --misc-padding-small: 0.66rem;
+  --misc-padding-regular: 1rem;
+  --misc-padding-medium: 1.25rem;
+  --misc-padding-big: 1.5rem;
+  --misc-padding-large: 3rem;
+
+  --misc-border-radius: 30px;
+  --misc-inner-padding: 3.5rem;
+
+  --misc-box-shadow: rgba(19, 26, 32, 0.067) 3px 5px 5px;
+  --misc-box-shadow-soft: rgba(28, 49, 66, 0.073) 3px 3px 5px;
+}
+
+// Seiten Mixin
+@mixin page {
+  --page-background: var(--color-background);
+  --page-content-width: 1000px;
+
+  --page-content-width-xs: 500px;
+  --page-content-width-s: 800px;
+  --page-content-width-m: 1150px;
+  --page-content-width-l: 1300px;
+  --page-content-width-xl: 1500px;
+
+  --page-gap-section: var(--misc-gap-large);
+  --page-gap-column: var(--misc-gap-regular);
+  --page-gap-paragraph: var(--misc-gap-small);
+  --page-gap-elements: var (--misc-gap-small);
+  
+  --page-background-header: var(--color-bright);
+  --page-height-header: 80px;
+  --page-height-hero: 90vh;
+  --page-section-gap: var(--misc-padding-medium);
+}
+
+// Root Variablen
+:root {
+  @include colors;
+  @include typography;
+  @include misc;
+  @include page;
+}
+
+// Breakpoint für kleine Telefone
+@include m {
+  :root {
+    --typo-fs-base: 16px;
+    --typo-fs-medium: 1.3rem;
+    --typo-fs-large: 2rem;
+    --typo-fs-huge: 3rem;
+
+    --misc-padding-large: 2rem;
+  }
+}

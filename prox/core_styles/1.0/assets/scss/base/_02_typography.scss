@@ -1,0 +1,33 @@
+/*
+ * Author: Patrick Piper
+ * Website: coretecs.net
+ * Version: 1.0
+ */
+
+h1, h2, h3, h4, h5, h6, th {
+    font-weight: var(--typo-fw-medium);
+    font-family: var(--typo-ff-secondary);
+    color: var(--color-headline);
+    line-height: 140%;
+}
+h1 {
+    font-size: var(--typo-fs-huge);
+}
+h2 {
+    font-size: var(--typo-fs-big);
+}
+p, a, ul, li, ol, span, label, td, input, select, div {
+    font-weight: 100;
+    font-size: inherit;
+    font-family: var(--typo-ff-primary);
+    color: var(--color-text);
+    line-height: 160%;
+}
+strong, b {
+    font-weight: var(--typo-fw-bold);
+}
+
+body {
+    font-size: var(--typo-fs-base);
+    font-family: var(--typo-ff-primary);
+}

@@ -1,0 +1,145 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  position: relative;
+  background: var(--color-background);
+
+  main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 66vh;
+    
+
+    background-size: 500px;
+    backdrop-filter: opacity(0.5);
+    > * {
+      z-index: 1;
+    }
+  }
+}
+
+.inner-content {
+  padding: var(--misc-padding-large);
+  width: calc(100% - var(--misc-padding-large) * 2);
+}
+
+
+figure.image:not(.overlay) {
+  max-height: 100%;
+  img {
+    border-radius: var(--misc-border-radius);
+    width: 100%;
+    max-height: 100%;
+    min-height: 400px;
+  }
+}
+
+figure.image {
+  img {
+    width: 100%;
+  }
+}
+
+horizontal-group, .horizontal {
+  display: flex;
+  position: relative;
+}
+
+vertical-group, .vertical {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@include s {
+  horizontal-group:not(.locked), .horizontal:not(.locked) {
+    flex-direction: column;
+    > .container {
+      width: unset;
+      flex: 1;
+    }
+  }
+  vertical-group, .vertical {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+
+section {
+  position: relative;
+  display: flex;
+  z-index: 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: var(--page-content-width);
+  
+  &.td-space {
+    padding: 6rem 0;
+  }
+
+  >.inner {
+    max-width: var(--page-content-width-s);
+    margin: auto;
+    margin: 0 auto;
+  }
+
+  &.full-width {
+    max-width: unset;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &.full-height {
+    height: 100vh;
+    margin: 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &.horizontal {
+    flex-direction: row;
+  }
+}
+
+.box {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+
+  background-color: var(--color-quiet);
+  border-radius: var(--misc-border-radius);
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+
+  >.overlay {
+    z-index: 1;
+  }
+  > .container {
+    z-index: 2;
+  }
+
+  &.dark {
+    background-color: var(--color-darkest);
+    --color-text: var(--color-brightest);
+    --color-headline: var(--color-brightest);
+  }
+
+  &.h-up {
+    aspect-ratio: 1/1.66;
+  }
+}

@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    gap: 1rem;
+    color: var(--color-text);
+    align-items: center;
+    text-align: center;
+    
+    &.gradient {
+        background: -webkit-linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-third));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    svg {
+        max-width: 200px;
+        min-width: 150px;
+        fill: var(--color-text);
+    }
+}

@@ -1,0 +1,98 @@
+/*
+ * Author: Patrick Piper
+ * Website: coretecs.net
+ * Version: 1.0
+ */
+
+// Keyframes für Animationen
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(1440px);
+  }
+}
+
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@keyframes glitchTop {
+  2%, 64% {
+    transform: translate(2px, -2px);
+  }
+  4%, 60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+@keyframes glitchBotom {
+  2%, 64% {
+    transform: translate(-2px, 0);
+  }
+  4%, 60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translateY(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bubbles {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
