@@ -5,9 +5,9 @@
   "version": "1.0",
   "require": {
     "php": ">=7.4",
-    "symfony/form": "^7.1.*",
-    "symfony/asset": "^7.1.*",
-    "symfony/twig-bundle": "^7.1.*",
+    "symfony/form": "7.1.*",
+    "symfony/asset": "7.1.*",
+    "symfony/twig-bundle": "7.1.*",
     "twig/twig": "^2.12|^3.0",
     "symfony/ux-twig-component": "^2.20",
     "symfony/webpack-encore-bundle": "^2.1"
