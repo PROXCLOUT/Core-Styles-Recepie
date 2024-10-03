@@ -1,5 +1,5 @@
 {  
-  "name": "proxclout/core-styles",
+  "name": "prox/core-styles",
   "type": "symfony-recipe",
   "description": "Core styles and assets for Symfony projects",
   "version": "1.0",

@@ -1,6 +1,6 @@
 {
-    "name": "proxclout-core-styles",
-    "version": "1.0.0",
+    "name": "prox-core-styles",
+    "version": "1.0",
     "description": "Core styles and assets for Symfony projects",
     "main": "app.js",
     "scripts": {
