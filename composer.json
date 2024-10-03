@@ -21,5 +21,11 @@
       "npm install",
       "npm run build"
     ]
+  },
+  "extra": {
+    "symfony": {
+      "allow-contrib": true,
+      "require": "7.1.*"
+    }
   }
 }

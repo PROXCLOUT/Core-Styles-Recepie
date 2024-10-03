@@ -1,7 +1,7 @@
 {
   "manifest": {
     "copy-from-recipe": {
-      "assets/": "%ASSETS_DIR%/",
+      "assets/": "assets/",
       "webpack/webpack.config.js": "webpack.config.js",
       "config/packages/webpack.yaml": "config/packages/webpack.yaml"
     },
